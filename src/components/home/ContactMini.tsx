@@ -41,12 +41,8 @@ const ContactMini = () => {
           </ScrollReveal>
 
           <ScrollReveal delay={200}>
-            <div className="bg-card rounded-2xl border border-border overflow-hidden h-full min-h-[300px] flex items-center justify-center">
-              <div className="text-center p-8">
-                <MapPin className="h-12 w-12 text-muted-foreground/30 mx-auto mb-3" />
-                <p className="text-muted-foreground text-sm">Google Maps Embed Placeholder</p>
-                <p className="text-xs text-muted-foreground/60 mt-1">Replace with your Google Maps iframe</p>
-              </div>
+            <div className="bg-card rounded-2xl border border-border overflow-hidden h-full min-h-[300px]">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.909817915024!2d74.73178537564247!3d26.297023386277885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396959dca582cb41%3A0x17da42387aed47fa!2sJai%20Ambe%20Electicals!5e0!3m2!1sen!2sin!4v1772377885858!5m2!1sen!2sin" width="100%" height="100%" style={{border: 0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Jai Ambey Electricals Location" />
             </div>
           </ScrollReveal>
         </div>

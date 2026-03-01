@@ -40,53 +40,7 @@ const Contact = () => {
       </section>
 
       <section className="section-padding bg-background">
-        <div className="container-custom grid lg:grid-cols-2 gap-12">
-          <ScrollReveal>
-            <h2 className="text-2xl font-heading font-bold text-foreground mb-6">Send Us a Message</h2>
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div>
-                <Label htmlFor="name">Your Name</Label>
-                <Input
-                  id="name"
-                  placeholder="Enter your name"
-                  value={formData.name}
-                  onChange={e => setFormData({ ...formData, name: e.target.value })}
-                  required
-                  className="mt-1.5"
-                />
-              </div>
-              <div>
-                <Label htmlFor="phone">Phone Number</Label>
-                <Input
-                  id="phone"
-                  type="tel"
-                  placeholder="Enter your phone number"
-                  value={formData.phone}
-                  onChange={e => setFormData({ ...formData, phone: e.target.value })}
-                  required
-                  className="mt-1.5"
-                />
-              </div>
-              <div>
-                <Label htmlFor="message">Message</Label>
-                <Textarea
-                  id="message"
-                  placeholder="How can we help you?"
-                  value={formData.message}
-                  onChange={e => setFormData({ ...formData, message: e.target.value })}
-                  required
-                  rows={5}
-                  className="mt-1.5"
-                />
-              </div>
-              <Button type="submit" size="lg" className="w-full">
-                <Send className="h-4 w-4 mr-2" />
-                Send Message
-              </Button>
-            </form>
-          </ScrollReveal>
-
-          <div>
+        <div className="container-custom max-w-3xl mx-auto">
             <ScrollReveal>
               <h2 className="text-2xl font-heading font-bold text-foreground mb-6">Contact Info</h2>
               <div className="space-y-4 mb-8">
@@ -112,15 +66,10 @@ const Contact = () => {
 
             <ScrollReveal delay={200}>
               <h3 className="text-lg font-heading font-semibold text-foreground mb-4">Find Us on Map</h3>
-              <div className="bg-secondary rounded-2xl border border-border overflow-hidden h-64 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <MapPin className="h-10 w-10 text-muted-foreground/30 mx-auto mb-2" />
-                  <p className="text-muted-foreground text-sm">Google Maps Embed Placeholder</p>
-                  <p className="text-xs text-muted-foreground/60 mt-1">Replace with your Google Maps iframe</p>
-                </div>
+              <div className="bg-secondary rounded-2xl border border-border overflow-hidden h-64">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.909817915024!2d74.73178537564247!3d26.297023386277885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396959dca582cb41%3A0x17da42387aed47fa!2sJai%20Ambe%20Electicals!5e0!3m2!1sen!2sin!4v1772377885858!5m2!1sen!2sin" width="100%" height="100%" style={{border: 0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Jai Ambey Electricals Location" />
               </div>
             </ScrollReveal>
-          </div>
         </div>
       </section>
     </main>
