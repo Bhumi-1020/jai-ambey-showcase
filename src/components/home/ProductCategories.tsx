@@ -2,25 +2,28 @@ import { Zap, Droplets, Tv, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '@/components/ScrollReveal';
+import lightingImg from '@/assets/lighting.jpeg';
+import pipeImg from '@/assets/pipe.jpg';
+import electronicsImg from '@/assets/electronics.jpg';
 
 const categories = [
   {
     title: 'Electricals',
     icon: Zap,
     items: ['Fans', 'Coolers', 'Lights', 'Plugs', 'Designer Switches', 'Juicers', 'LED Lights', 'Disco Lights'],
-    color: 'from-primary to-primary/80',
+    image: lightingImg,
   },
   {
     title: 'Pipe Fitting',
     icon: Droplets,
     items: ['Water Tanks', 'Pipes', 'Taps', 'Pipe Fittings'],
-    color: 'from-primary/90 to-primary/70',
+    image: pipeImg,
   },
   {
     title: 'Electronics',
     icon: Tv,
     items: ['LED TVs', 'Refrigerators', 'Washing Machines'],
-    color: 'from-primary/80 to-primary/60',
+    image: electronicsImg,
   },
 ];
 
@@ -42,9 +45,9 @@ const ProductCategories = () => {
           {categories.map((cat, index) => (
             <ScrollReveal key={cat.title} delay={index * 150}>
               <div className="group bg-card rounded-2xl overflow-hidden shadow-md hover-lift cursor-pointer">
-                <div className={`h-48 bg-gradient-to-br ${cat.color} flex items-center justify-center relative overflow-hidden`}>
-                  <cat.icon className="h-16 w-16 text-primary-foreground opacity-90 group-hover:scale-110 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-primary-foreground/0 group-hover:bg-primary-foreground/5 transition-colors duration-300" />
+                <div className="h-48 relative overflow-hidden">
+                  <img src={cat.image} alt={cat.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors duration-300" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-heading font-bold text-card-foreground mb-3">{cat.title}</h3>

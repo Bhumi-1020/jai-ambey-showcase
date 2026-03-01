@@ -48,7 +48,7 @@ const HeroSection = () => {
                 Call Now
               </a>
             </Button>
-            <Button size="lg" variant="outline" asChild className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 text-base px-8 py-6 font-semibold">
+            <Button size="lg" asChild className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-base px-8 py-6 font-semibold">
               <Link to="/contact">
                 <MapPin className="h-5 w-5 mr-2" />
                 Visit Store
